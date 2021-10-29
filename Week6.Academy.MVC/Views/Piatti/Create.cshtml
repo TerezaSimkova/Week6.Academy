@@ -1,0 +1,11 @@
+﻿@model PiattiViewModel
+
+<h1>Inserisci nuovo piatto</h1>
+<form method="post">
+
+    <partial name="_PartialView" model="Model" />
+
+    <input type="submit" value="Salva" class="btn btn-warning" />
+    <input type="reset" value="Reset" class="btn btn-success" />
+    <a class="btn btn-primary" asp-controller="Piatti" asp-action="Index" role="button">Indietro</a>
+</form>

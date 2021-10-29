@@ -1,0 +1,23 @@
+﻿@model UtenteLoginViewModel
+
+    <div class="card mx-auto" style="width: 18rem;">
+        <form method="post" class="text-center">
+            <div asp-validation-summary="All"></div>
+
+            <input type="hidden" asp-for="ReturnUrl" />
+
+            Username:
+            <input asp-for="Username" />
+            <span asp-validation-for="Username"></span>
+            <br />
+            <br />
+            Password:
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+            <br />
+            <br />
+            <p>
+                <input type="submit" value="Login" class="btn btn-warning justify-content-xl-center" />
+            </p>
+        </form>
+    </div>

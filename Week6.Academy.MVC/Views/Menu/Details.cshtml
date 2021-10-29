@@ -1,0 +1,35 @@
+﻿@model MenuViewModel
+
+<h1>Ecco i dettagli del menu @Model.Nome :</h1>
+<br />
+<hr />
+<p>Di Seguito l'elenco dei piatti:</p>
+
+<table class="table table-bordered">
+    <thead class="table table-dark">
+        <tr>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Tipologia</th>
+            <th>Prezzo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Piatti)
+        {
+<tr>
+    <td>@item.Nome</td>
+    <td>@item.Descrizione</td>
+    <td>@item.Tipologia</td>
+    <td>@item.Prezzo</td>
+</tr>}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Totale</th>
+            <th>@Model.Piatti.Count</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>
